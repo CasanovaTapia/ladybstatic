@@ -1,15 +1,21 @@
+
 body {
     background: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
     height: 100%;
 }
 
 /* FONTS */
 html { font-size: 62.5%; }
-body { font-size: 20px; font-size: 2.0rem; letter-spacing: .05rem; font-weight: 300; }
-h1   { font-size: 36px; font-size: 3.6rem; font-family: 'Raleway', sans-serif; }
+body { font-size: 18px; font-size: 1.8rem; font-family: 'Merriweather', serif; letter-spacing: .5px; letter-spacing: .05rem; line-height: 30px; line-height: 3rem; }
+h1   { font-size: 36px; font-size: 3.6rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
+h2   { font-size: 16px; font-size: 1.6rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
+h3   { font-size: 24px; font-size: 2.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
+h4   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
+h5   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
+h6   { font-size: 14px; font-size: 1.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
 
-.caps { text-transform: uppercase; font-weight: bold; letter-spacing: .2rem;}
+nav a   { font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
+
 .big { font-size: 48px; font-size: 4.8rem; line-height: 60px;}
 .xsmall { font-size: 75%; }
 /* END FONTS */
@@ -26,7 +32,31 @@ a.active {
     color: #e74c3c;
     text-decoration: none;
 }
+
+a {
+  cursor: pointer !important;
+}
 /* END Links */
+
+/* Navbar */
+.navbar-default {
+  background-color: rgba(52, 152, 219, .8);
+  border: none;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-default .navbar-nav li a, .button .navbar-toggle .collapsed {
+  color: #fff;
+}
+/* END Navbar */
 
 /* Hero */
 #hero {
@@ -61,6 +91,9 @@ a.active {
 }
 #engKnow, #frnKnow {
     max-width: 500px;
+}
+#engKnow h1, #frnKnow h1 {
+  margin-bottom: 50px;
 }
 .modal-content {
     background: #3498db;
@@ -121,9 +154,8 @@ a.active {
     margin-left: 0;
     margin-right: auto;
 }
-.cast-list .col-md-4 .caps {
+.cast-list .col-md-4 h5 {
     margin-bottom: -5px;
-    font-family: 'Raleway', sans-serif;
 }
 /* END Cast */
 
