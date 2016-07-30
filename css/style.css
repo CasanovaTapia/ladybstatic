@@ -14,6 +14,12 @@ h4   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; t
 h5   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
 h6   { font-size: 14px; font-size: 1.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
 
+@media screen and (max-width: 414px) {
+  body { font-size: 20px; font-size: 2rem; font-family: 'Merriweather', serif; letter-spacing: .5px; letter-spacing: .05rem; line-height: 30px; line-height: 3rem; }
+  h1   { font-size: 28px; font-size: 2.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
+  h2   { font-size: 14px; font-size: 1.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
+}
+
 nav a   { font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
 
 .big { font-size: 48px; font-size: 4.8rem; line-height: 60px;}
@@ -58,46 +64,81 @@ a {
 }
 /* END Navbar */
 
+/* Section padding */
+#about, #same, #statement, #cast, #contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#same {
+  margin-top: -15px;
+}
+
+@media only screen and (max-width: 414px) {
+  #same {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+/* END Section padding */
+
+/* Section heights */
+#hero, #about {
+  min-height: 95vh;
+}
+
+@media only screen and (max-width: 414px) {
+  #hero {
+    min-height: 80vh;
+  }
+  #about {
+    min-height: auto;
+  }
+}
+
+/* END Section heights*/
+
 /* Hero */
 #hero {
-    height: 100vh;
-    width: 100vw;
     background-image: url("../img/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: top left;
 }
 /* END Hero*/
 
 /* Support */
-#support {
-    padding: 150px;
-}
 #support h1 {
     font-size: 120%;
+}
+#support {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 /* END Support*/
 
 /* About */
 #about {
-    height: 100vh;
-    width: 100vw;
+    width: auto;
     background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/duo6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     color: #fff;
-    padding: 100px;
 }
-#engKnow, #frnKnow {
-    max-width: 500px;
-}
+
 #engKnow h1, #frnKnow h1 {
   margin-bottom: 50px;
 }
+
+#engKnow p, #frnKnow p {
+  max-width: 500px;
+}
+
 .modal-content {
     background: #3498db;
 }
+
 .modal-body {
     padding: 50px;
 }
@@ -105,8 +146,6 @@ a {
 
 /* Same */
 #same {
-    padding-top: 200px;
-    padding-bottom: 200px;
     background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) );
 }
 .quote {
@@ -116,25 +155,14 @@ a {
 /* END Same */
 
 /* Statement */
-#statement {
-    padding: 100px;
-}
-#engDir, #frnDir {
-    width: 80%;
-    max-width: 900px;
-    margin: auto;
-}
 .dir-body {
     margin-top: 50px;
 }
+
 /* END Statement */
 
 /* Cast */
-#cast {
-    padding: 100px;
-}
 .cast-list {
-    max-width: 800px;
     margin: auto;
 }
 .img-cast {
@@ -157,12 +185,24 @@ a {
 .cast-list .col-md-4 h5 {
     margin-bottom: -5px;
 }
+
+@media screen and (max-width: 414px) {
+  .cast-list .col-xs-4 {
+    width: 100% !important;
+  }
+
+  .cast-list h5, .cast-list h6 {
+    text-align: left !important;
+  }
+
+  .cast-list img {
+    margin-left:0;
+    margin-right: auto;
+  }
+}
 /* END Cast */
 
 /* Contact */
-#contact {
-    padding: 200px;
-}
 /* END Contact */
 
 /* Credits */
