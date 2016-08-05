@@ -6,21 +6,19 @@ body {
 
 /* FONTS */
 html { font-size: 62.5%; }
-body { font-size: 18px; font-size: 1.8rem; font-family: 'Merriweather', serif; letter-spacing: .5px; letter-spacing: .05rem; line-height: 30px; line-height: 3rem; }
-h1   { font-size: 36px; font-size: 3.6rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
-h2   { font-size: 16px; font-size: 1.6rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
-h3   { font-size: 24px; font-size: 2.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
-h4   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
-h5   { font-size: 18px; font-size: 1.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
-h6   { font-size: 14px; font-size: 1.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
+body { font-size: 18px; font-size: 1.8rem; font-family: 'Archivo Narrow', sans-serif; line-height: 30px; line-height: 3rem; }
+h1   { font-size: 36px; font-size: 3.6rem; font-family: 'Six Caps', sans-serif; text-transform: uppercase; }
+h2   { font-size: 16px; font-size: 1.6rem; font-family: 'Archivo Narrow', sans-serif; text-transform: uppercase; }
+h3   { font-size: 24px; font-size: 2.4rem; font-family: 'Six Caps', sans-serif; text-transform: uppercase; }
+h4   { font-size: 18px; font-size: 1.8rem; font-family: 'Archivo Narrow', sans-serif; text-transform: uppercase; }
+h5   { font-size: 18px; font-size: 1.8rem; font-family: 'Six Caps', sans-serif; text-transform: uppercase; }
+h6   { font-size: 14px; font-size: 1.4rem; font-family: 'Archivo Narrow', sans-serif; text-transform: uppercase; }
 
 @media screen and (max-width: 414px) {
-  body { font-size: 20px; font-size: 2rem; font-family: 'Merriweather', serif; letter-spacing: .5px; letter-spacing: .05rem; line-height: 30px; line-height: 3rem; }
-  h1   { font-size: 28px; font-size: 2.8rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
-  h2   { font-size: 14px; font-size: 1.4rem; font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 300; letter-spacing: 4px; letter-spacing: .4rem; }
+  body { font-size: 20px; font-size: 2rem; font-family: 'Archivo Narrow', sans-serif; line-height: 30px; line-height: 3rem; }
+  h1   { font-size: 28px; font-size: 2.8rem; font-family: 'Six Caps', sans-serif; text-transform: uppercase; }
+  h2   { font-size: 14px; font-size: 1.4rem; font-family: 'Archivo Narrow', sans-serif; text-transform: uppercase;  }
 }
-
-nav a   { font-family: 'Raleway', sans-serif; text-transform: uppercase; font-weight: 900; }
 
 .big { font-size: 48px; font-size: 4.8rem; line-height: 60px;}
 .xsmall { font-size: 75%; }
@@ -44,172 +42,51 @@ a {
 }
 /* END Links */
 
-/* Navbar */
-.navbar-default {
-  background-color: rgba(52, 152, 219, .8);
-  border: none;
-}
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-.navbar-default .navbar-nav li a, .button .navbar-toggle .collapsed {
-  color: #fff;
-}
-/* END Navbar */
-
-/* Section padding */
-#about, #same, #statement, #cast, #contact {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-#same {
-  margin-top: -15px;
-}
-
-@media only screen and (max-width: 414px) {
-  #same {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-}
-/* END Section padding */
-
-/* Section heights */
-#hero, #about {
-  min-height: 95vh;
-}
-
-@media only screen and (max-width: 414px) {
-  #hero {
-    min-height: 80vh;
-  }
-  #about {
-    min-height: auto;
-  }
-}
-
-/* END Section heights*/
-
 /* Hero */
 #hero {
-    background-image: url("../img/hero.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
+  min-height: 100vh;
+  background-image: url("../img/hero.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: bottom center;
+}
+
+.film-by {
+  width: 400px;
+  display: block;
+  margin: 10px auto;
+}
+
+.fb-banner {
+  width: 250px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.animated {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    min-height: 100vh;
+    background-image: url("../img/hero-mobile.png");
+    background-position: top center;
+  }
+
+  .fb-banner {
+    height: 50px;
+    width: auto;
+    top: 0;
+    bottom: auto;
+  }
+  .film-by {
+    display: none;
+  }
 }
 /* END Hero*/
-
-/* Support */
-#support h1 {
-    font-size: 120%;
-}
-#support {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-/* END Support*/
-
-/* About */
-#about {
-    width: auto;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../img/duo6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    color: #fff;
-}
-
-#engKnow h1, #frnKnow h1 {
-  margin-bottom: 50px;
-}
-
-#engKnow p, #frnKnow p {
-  max-width: 500px;
-}
-
-.modal-content {
-    background: #3498db;
-}
-
-.modal-body {
-    padding: 50px;
-}
-/* END About*/
-
-/* Same */
-#same {
-    background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) );
-}
-.quote {
-    width: 90%;
-    max-width: 1200px;
-}
-/* END Same */
-
-/* Statement */
-.dir-body {
-    margin-top: 50px;
-}
-
-/* END Statement */
-
-/* Cast */
-.cast-list {
-    margin: auto;
-}
-.img-cast {
-    max-height: 300px;
-    width: auto;
-}
-.top-2 {
-    margin-bottom: 50px;
-}
-.top-2 img {
-    display: block;
-    margin-right: 0;
-    margin-left: auto;
-}
-.last-3 img {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-}
-.cast-list .col-md-4 h5 {
-    margin-bottom: -5px;
-}
-
-@media screen and (max-width: 414px) {
-  .cast-list .col-xs-4 {
-    width: 100% !important;
-  }
-
-  .cast-list h5, .cast-list h6 {
-    text-align: left !important;
-  }
-
-  .cast-list img {
-    margin-left:0;
-    margin-right: auto;
-  }
-}
-/* END Cast */
-
-/* Contact */
-/* END Contact */
-
-/* Credits */
-#credits h4 {
-    margin-top: 30px;
-}
-/* END Credits */
 
 /* Footer */
 #footer {
@@ -219,9 +96,3 @@ a {
     font-size: 60%;
 }
 /* END Footer*/
-
-/* todo
-nav
-cursor on links
-
-*/
